@@ -1,5 +1,5 @@
 import React from 'react';
-import Overview from './components/Overview.js';
+import Overview from './components/Overview';
 
 class App extends React.Component {
   constructor(props) {
@@ -14,8 +14,8 @@ class App extends React.Component {
     e.preventDefault();
     this.setState({
       tasks: [...this.state.tasks, this.state.newTask],
+      newTask: '',
     });
-    document.querySelector('input').value = '';
   };
 
   updateState = (e) => {
