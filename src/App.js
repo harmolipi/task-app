@@ -28,7 +28,11 @@ class App extends React.Component {
     return (
       <div className="App">
         <form onSubmit={this.addTask}>
-          <input onChange={this.updateState} placeholder="New task" />
+          <input
+            onChange={this.updateState}
+            placeholder="New task"
+            value={this.state.newTask}
+          />
           <button>Add</button>
         </form>
         <Overview tasks={this.state.tasks} />
